@@ -4,6 +4,7 @@ import ast.node.Program;
 import compileError.CompileError;
 import main.grammar.LogicPLLexer;
 import main.grammar.LogicPLParser;
+import visitor.CodeGenerator.CodeGenerator;
 import visitor.nameAnalyzer.NameAnalyzer;
 import visitor.astPrinter.ASTPrinter;
 import org.antlr.v4.runtime.*;
@@ -22,14 +23,22 @@ public class Main {
             NameAnalyzer nameAnalyzer = new NameAnalyzer();
             nameAnalyzer.visit(program);
 
-            TypeAnalyzer typeAnalyzer = new TypeAnalyzer();
-            typeAnalyzer.visit(program);
-            if (typeAnalyzer.typeErrors.size() > 0){
-                for(CompileError compileError: typeAnalyzer.typeErrors)
-                    System.out.println(compileError.getMessage());
-                return;
-            }
+//            TypeAnalyzer typeAnalyzer = new TypeAnalyzer();
+//            typeAnalyzer.visit(program);
+//
+//            if (typeAnalyzer.typeErrors.size() > 0){
+//                for(CompileError compileError: typeAnalyzer.typeErrors)
+//                    System.out.println(compileError.getMessage());
+//                return;
+//            }
 
+            CodeGenerator codeGenerator = new CodeGenerator();
+            codeGenerator.visit(program);
+
+            if(codeGenerator.bytecodes.size() > 0){
+                for(String bytecode: codeGenerator.bytecodes)
+                    System.out.println(bytecode);
+            }
 
             System.out.println("Compilation was Successful!!");
         }

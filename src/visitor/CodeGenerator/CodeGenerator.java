@@ -35,9 +35,16 @@ import java.util.Stack;
 public class CodeGenerator extends Visitor<Void>  {
 
     public ArrayList<String> bytecodes = new ArrayList<>();
-    private Stack<String> constPool = new Stack<>();
+    private ArrayList<String> localVarArray = new ArrayList<>();
 
-
+    private int slotOf(String name) {
+        int slot = localVarArray.indexOf(name);
+        if (slot == -1) {
+            localVarArray.add(name);
+            slot = localVarArray.size() - 1;
+        }
+        return slot;
+    }
     @Override
     public Void visit(Program program){
         for(var functionDec : program.getFuncs()) {
@@ -108,7 +115,7 @@ public class CodeGenerator extends Visitor<Void>  {
 
     public Void visit(Identifier identifier){
         int slot = slotOf(identifier.getName());
-        bytecodes.add((new Istore(slot)).toString());
+        bytecodes.add((new Iload(slot)).toString());
 
         return null;
     }
