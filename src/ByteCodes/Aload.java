@@ -2,7 +2,7 @@ package ByteCodes;
 
 public class Aload extends ByteCode{
     private int index;
-    public void Aload(int _index){index = _index;}
+    public Aload(int _index){index = _index;}
 
     public String toString() {
             if (index <= 3 && index >= 0)
