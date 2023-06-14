@@ -66,9 +66,12 @@ public class CodeGenerator extends Visitor<Void>  {
         return null;
     }
 
+
     public Void visit(AssignStmt assignStmt){
         assignStmt.getRValue().accept(this);
         // TODO set istore for left value manually
+        int slot = slotOf(((Variable)assignStmt.getLValue()).getName());
+        bytecodes.add((new Istore(slot)).toString());
 
         return null;
     }
@@ -110,51 +113,54 @@ public class CodeGenerator extends Visitor<Void>  {
         return null;
     }
 
+    @Override
+    public Void visit(VarDecStmt varDecStmt){
+        varDecStmt.getInitialExpression().accept(this);
+        int slot = slotOf(varDecStmt.getIdentifier().getName());
+        bytecodes.add((new Istore(slot)).toString());
 
-    // a = 3
-    // varDeclartion
-    // Assingnstatement
+        return null;
+    }
 
-//    @Override
-//    public String visit(AssignStmt assignStmt){
-//        assignStmt.getLValue().accept(this);
-//    }
-    // a = b + c + a
+    @Override
+    public Void visit(FunctionCall functionCall){
+        for (Expression arg: functionCall.getArgs()){
+            arg.accept(this);
+        }
+        String path = "Main/" + functionCall.getUFuncName().getName() + "()I";
+        bytecodes.add((new Invokestatic(path)).toString());
 
-
+        return null;
+    }
 
 
     @Override
-    public String visit(ReturnStmt returnStmt) {
-        String command = "";
-        command += returnStmt.getExpression().accept(this);
+    public Void visit(ReturnStmt returnStmt) {
+        returnStmt.getExpression().accept(this);
         Type returnType = returnStmt.getExpression().getType();
 
         if (returnType instanceof VoidType)
-            command += (new Return(0)).toString();
+            bytecodes.add((new Return(0)).toString());
         else
-            command += (new Return(1)).toString();
+            bytecodes.add((new Return(1)).toString());
 
-        return command;
+        return null;
     }
 
     @Override
-    public String visit(IntValue intValue){
-        String command = "";
-        command += (new Bipush(intValue.getConstant())).toString();
-        return command;
+    public Void visit(IntValue intValue){
+        bytecodes.add((new Bipush(intValue.getConstant())).toString());
+        return null;
     }
 
     @Override
-    public String visit(BooleanValue booleanValue){
-        String command = "";
+    public Void visit(BooleanValue booleanValue){
         if(booleanValue.getConstant())
-            command += (new Iconst(1).toString());
+            bytecodes.add((new Iconst(1)).toString());
         else
-            command += (new Iconst(0)).toString();
+            bytecodes.add((new Iconst(0)).toString());
 
-        return command;
+        return null;
     }
-
 
 }
