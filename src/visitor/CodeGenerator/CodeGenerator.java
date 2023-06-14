@@ -49,6 +49,7 @@ public class CodeGenerator extends Visitor<Void>  {
     public Void visit(Program program){
         for(var functionDec : program.getFuncs()) {
             functionDec.accept(this);
+            localVarArray.clear();
         }
         program.getMain().accept(this);
 
@@ -150,6 +151,7 @@ public class CodeGenerator extends Visitor<Void>  {
             bytecodes.add((new Return(0)).toString());
         else
             bytecodes.add((new Return(1)).toString());
+
 
         return null;
     }

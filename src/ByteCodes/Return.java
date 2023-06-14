@@ -7,6 +7,6 @@ public class Return extends ByteCode{
         if(type == 0)
             return "return";
         else
-            return "areturn";
+            return "ireturn";
     }
 }
