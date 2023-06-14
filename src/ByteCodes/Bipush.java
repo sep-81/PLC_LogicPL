@@ -6,6 +6,6 @@ public class Bipush extends ByteCode{
     public Bipush(int val){value = val;}
 
     public String toString(){
-        return "bipush_" + value;
+        return "bipush " + value;
     }
 }

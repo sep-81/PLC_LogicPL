@@ -13,7 +13,9 @@ public class Identifier extends Variable{
     public String toString() {
         return "Identifier " + name;
     }
-
+    public String getName() {
+        return name;
+    }
 
     @Override
     public <T> T accept(IVisitor<T> visitor) {

@@ -47,10 +47,26 @@ public class CodeGenerator extends Visitor<Void>  {
     }
     @Override
     public Void visit(Program program){
+
+        bytecodes.add(".class public Main");
+        bytecodes.add(".super java/lang/Object");
+
+        bytecodes.add(".method public <init>()V");
+        bytecodes.add("aload_0");
+        bytecodes.add("invokenonvirtual java/lang/Object/<init>()V");
+        bytecodes.add("return");
+        bytecodes.add(".end method");
+
         for(var functionDec : program.getFuncs()) {
+            bytecodes.add(".method static " + functionDec.getName().getName()+"()I");
+            bytecodes.add(".limit stack 16");
+            bytecodes.add(".limit locals 10");
             functionDec.accept(this);
+            bytecodes.add(".end method");
+
             localVarArray.clear();
         }
+
         program.getMain().accept(this);
 
         return null;
@@ -66,11 +82,15 @@ public class CodeGenerator extends Visitor<Void>  {
     }
 
     @Override
-    public Void visit(MainDeclaration mainDecleration){
-        for (var stmt : mainDecleration.getMainStatements()) {
+    public Void visit(MainDeclaration mainDeclaration){
+        bytecodes.add(".method public static main([Ljava/lang/String;)V");
+        bytecodes.add(".limit stack 16");
+        bytecodes.add(".limit locals 3");
+        for (var stmt : mainDeclaration.getMainStatements()) {
             stmt.accept(this);
         }
-
+        bytecodes.add("return");
+        bytecodes.add(".end method");
         return null;
     }
 
@@ -137,7 +157,7 @@ public class CodeGenerator extends Visitor<Void>  {
         }
         String path = "Main/" + functionCall.getUFuncName().getName() + "()I";
         bytecodes.add((new Invokestatic(path)).toString());
-
+        bytecodes.add("pop");
         return null;
     }
 
