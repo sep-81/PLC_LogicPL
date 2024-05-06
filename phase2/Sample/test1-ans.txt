@@ -1,0 +1,109 @@
+Line 0: Program
+Line 2: FuncDeclarationIdentifier isDivisible
+Line 2: Identifier isDivisible
+Line 2: ArgDeclaration int
+Line 2: Identifier a
+Line 2: ArgDeclaration int
+Line 2: Identifier b
+Line 3: ImplicationStmt
+Line 3: BinaryExpression eq
+Line 3: Identifier b
+Line 3: IntValue 0
+Line 3: ReturnStmt
+Line 3: BooleanValue false
+Line 4: ImplicationStmt
+Line 4: BinaryExpression eq
+Line 4: BinaryExpression mod
+Line 4: Identifier a
+Line 4: Identifier b
+Line 4: IntValue 0
+Line 4: ReturnStmt
+Line 4: BooleanValue true
+Line 5: ImplicationStmt
+Line 5: BinaryExpression neq
+Line 5: BinaryExpression mod
+Line 5: Identifier a
+Line 5: Identifier b
+Line 5: IntValue 0
+Line 5: ReturnStmt
+Line 5: BooleanValue false
+Line 8: MainDeclaration
+Line 9: VarDeclaration
+Line 9: Identifier num1
+Line 9: IntValue 50
+Line 10: PredicateStmt
+Line 10: Identifier EvenNumber
+Line 10: Identifier num1
+Line 12: ImplicationStmt
+Line 12: BinaryExpression and
+Line 12: QueryExpression
+Line 12: Identifier EvenNumber
+Line 12: Identifier num1
+Line 12: FunctionCall
+Line 12: Identifier isDivisible
+Line 12: Identifier num1
+Line 12: IntValue 5
+Line 12: PredicateStmt
+Line 12: Identifier DivisibleBy10
+Line 12: Identifier num1
+Line 14: ArrayDeclaration 2
+Line 14: Identifier int_array
+Line 14: IntValue 4
+Line 14: IntValue 5
+Line 15: VarDeclaration
+Line 15: Identifier num2
+Line 15: IntValue 200
+Line 16: VarDeclaration
+Line 16: Identifier divisible
+Line 16: BooleanValue true
+Line 17: ForloopStmt
+Line 17: Identifier a
+Line 17: Identifier int_array
+Line 18: ImplicationStmt
+Line 18: UnaryExpression not
+Line 18: FunctionCall
+Line 18: Identifier isDivisible
+Line 18: Identifier num2
+Line 18: Identifier a
+Line 18: AssignStmt
+Line 18: Identifier divisible
+Line 18: BooleanValue false
+Line 18: ReturnStmt
+Line 20: ImplicationStmt
+Line 20: BinaryExpression eq
+Line 20: Identifier divisible
+Line 20: BooleanValue true
+Line 20: PredicateStmt
+Line 20: Identifier DivisibleBy20
+Line 20: Identifier num2
+Line 22: ImplicationStmt
+Line 22: QueryExpression
+Line 22: Identifier DivisibleBy20
+Line 22: Identifier num2
+Line 22: PredicateStmt
+Line 22: Identifier EvenNumber
+Line 22: Identifier num2
+Line 22: PredicateStmt
+Line 22: Identifier DivisibleBy10
+Line 22: Identifier num2
+Line 23: PrintStmt
+Line 23: QueryExpression
+Line 23: Identifier EvenNumber
+Line 23: Identifier num2
+Line 24: PrintStmt
+Line 24: QueryExpression
+Line 24: Identifier DivisibleBy10
+Line 25: AssignStmt
+Line 25: Identifier num1
+Line 25: BinaryExpression add
+Line 25: BinaryExpression mult
+Line 25: Identifier a
+Line 25: Identifier b
+Line 25: BinaryExpression sub
+Line 25: BinaryExpression mult
+Line 25: Identifier c
+Line 25: Identifier d
+Line 25: BinaryExpression div
+Line 25: Identifier e
+Line 25: Identifier f
+Compilation was Successful!!

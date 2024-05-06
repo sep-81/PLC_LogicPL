@@ -1,0 +1,48 @@
+# -- def: (functions) --
+function randomFunc(): boolean {
+    int a;
+    IsRand(a);
+    ( ( b * c / d >= e == f ) && ![?IsRand(a)] ) => (boolean flag = false; int flag; print(a); return true;)
+    return false;
+}
+
+function isPossible(int a, int b): int {
+    IsLocal(b);
+    int randomFunc;
+    boolean[5] local_array = [-1, true, 666, -10, 0, 10.06];
+    boolean[5] local_array = [-1, true, 666, -10, 0, 10.06];
+    for (i : local_array)
+    {
+        int a;
+        int local_array = 1;
+        (randomFunc() + a == c % (d + 54) && true) => (return; a = a + 5;)
+        print([?IsLocal(a)]);
+        int c = local_array[a * 23 + 2] + 5;
+    }
+}
+
+function isPossible(int a, int b): int {
+    IsLocal(b);
+    int a;
+    int a;
+    int randomFunc;
+}
+
+# -- def: (main class) --
+main{
+    int num1 = (a + b % 2) || s - e && a + (-a) + 1 == t * t + 101;
+    int num2 = -0.012;
+    int num2;
+    DoCalc(num2);
+
+    ([?DoCalc(num1)] && isPossiblee(num1, 5)) => (
+        for (i : array)
+        {
+            print(i);
+            (-(i+1) != num1 || !randomFunc()) => (flag = true; return;)
+        }
+        EventNum(i);
+        boolean flag = isPossible(a);
+    )
+    print([EventNum(?)]);
+}

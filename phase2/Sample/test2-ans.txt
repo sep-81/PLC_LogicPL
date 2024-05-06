@@ -1,0 +1,196 @@
+Line 0: Program
+Line 2: FuncDeclarationIdentifier randomFunc
+Line 2: Identifier randomFunc
+Line 3: VarDeclaration
+Line 3: Identifier a
+Line 4: PredicateStmt
+Line 4: Identifier IsRand
+Line 4: Identifier a
+Line 5: ImplicationStmt
+Line 5: BinaryExpression and
+Line 5: BinaryExpression eq
+Line 5: BinaryExpression gte
+Line 5: BinaryExpression mult
+Line 5: Identifier b
+Line 5: BinaryExpression div
+Line 5: Identifier c
+Line 5: Identifier d
+Line 5: Identifier e
+Line 5: Identifier f
+Line 5: UnaryExpression not
+Line 5: QueryExpression
+Line 5: Identifier IsRand
+Line 5: Identifier a
+Line 5: VarDeclaration
+Line 5: Identifier flag
+Line 5: BooleanValue false
+Line 5: VarDeclaration
+Line 5: Identifier flag
+Line 5: PrintStmt
+Line 5: Identifier a
+Line 5: ReturnStmt
+Line 5: BooleanValue true
+Line 6: ReturnStmt
+Line 6: BooleanValue false
+Line 9: FuncDeclarationIdentifier isPossible
+Line 9: Identifier isPossible
+Line 9: ArgDeclaration int
+Line 9: Identifier a
+Line 9: ArgDeclaration int
+Line 9: Identifier b
+Line 10: PredicateStmt
+Line 10: Identifier IsLocal
+Line 10: Identifier b
+Line 11: VarDeclaration
+Line 11: Identifier randomFunc
+Line 12: ArrayDeclaration 5
+Line 12: Identifier local_array
+Line 12: IntValue -1
+Line 12: BooleanValue true
+Line 12: IntValue 666
+Line 12: IntValue -10
+Line 12: IntValue 0
+Line 12: FloatValue 10.06
+Line 13: ArrayDeclaration 5
+Line 13: Identifier local_array
+Line 13: IntValue -1
+Line 13: BooleanValue true
+Line 13: IntValue 666
+Line 13: IntValue -10
+Line 13: IntValue 0
+Line 13: FloatValue 10.06
+Line 14: ForloopStmt
+Line 14: Identifier i
+Line 14: Identifier local_array
+Line 16: VarDeclaration
+Line 16: Identifier a
+Line 17: VarDeclaration
+Line 17: Identifier local_array
+Line 17: IntValue 1
+Line 18: ImplicationStmt
+Line 18: BinaryExpression and
+Line 18: BinaryExpression eq
+Line 18: BinaryExpression add
+Line 18: FunctionCall
+Line 18: Identifier randomFunc
+Line 18: Identifier a
+Line 18: BinaryExpression mod
+Line 18: Identifier c
+Line 18: BinaryExpression add
+Line 18: Identifier d
+Line 18: IntValue 54
+Line 18: BooleanValue true
+Line 18: ReturnStmt
+Line 18: AssignStmt
+Line 18: Identifier a
+Line 18: BinaryExpression add
+Line 18: Identifier a
+Line 18: IntValue 5
+Line 19: PrintStmt
+Line 19: QueryExpression
+Line 19: Identifier IsLocal
+Line 19: Identifier a
+Line 20: VarDeclaration
+Line 20: Identifier c
+Line 20: BinaryExpression add
+Line 20: ArrayAccess local_array
+Line 20: BinaryExpression add
+Line 20: BinaryExpression mult
+Line 20: Identifier a
+Line 20: IntValue 23
+Line 20: IntValue 2
+Line 20: IntValue 5
+Line 24: FuncDeclarationIdentifier isPossible
+Line 24: Identifier isPossible
+Line 24: ArgDeclaration int
+Line 24: Identifier a
+Line 24: ArgDeclaration int
+Line 24: Identifier b
+Line 25: PredicateStmt
+Line 25: Identifier IsLocal
+Line 25: Identifier b
+Line 26: VarDeclaration
+Line 26: Identifier a
+Line 27: VarDeclaration
+Line 27: Identifier a
+Line 28: VarDeclaration
+Line 28: Identifier randomFunc
+Line 32: MainDeclaration
+Line 33: VarDeclaration
+Line 33: Identifier num1
+Line 33: BinaryExpression or
+Line 33: BinaryExpression add
+Line 33: Identifier a
+Line 33: BinaryExpression mod
+Line 33: Identifier b
+Line 33: IntValue 2
+Line 33: BinaryExpression and
+Line 33: BinaryExpression sub
+Line 33: Identifier s
+Line 33: Identifier e
+Line 33: BinaryExpression eq
+Line 33: BinaryExpression add
+Line 33: Identifier a
+Line 33: BinaryExpression add
+Line 33: UnaryExpression minus
+Line 33: Identifier a
+Line 33: IntValue 1
+Line 33: BinaryExpression add
+Line 33: BinaryExpression mult
+Line 33: Identifier t
+Line 33: Identifier t
+Line 33: IntValue 101
+Line 34: VarDeclaration
+Line 34: Identifier num2
+Line 34: FloatValue -0.012
+Line 35: VarDeclaration
+Line 35: Identifier num2
+Line 36: PredicateStmt
+Line 36: Identifier DoCalc
+Line 36: Identifier num2
+Line 38: ImplicationStmt
+Line 38: BinaryExpression and
+Line 38: QueryExpression
+Line 38: Identifier DoCalc
+Line 38: Identifier num1
+Line 38: FunctionCall
+Line 38: Identifier isPossiblee
+Line 38: Identifier num1
+Line 38: IntValue 5
+Line 39: ForloopStmt
+Line 39: Identifier i
+Line 39: Identifier array
+Line 41: PrintStmt
+Line 41: Identifier i
+Line 42: ImplicationStmt
+Line 42: BinaryExpression or
+Line 42: BinaryExpression neq
+Line 42: UnaryExpression minus
+Line 42: BinaryExpression add
+Line 42: Identifier i
+Line 42: IntValue 1
+Line 42: Identifier num1
+Line 42: UnaryExpression not
+Line 42: FunctionCall
+Line 42: Identifier randomFunc
+Line 42: AssignStmt
+Line 42: Identifier flag
+Line 42: BooleanValue true
+Line 42: ReturnStmt
+Line 44: PredicateStmt
+Line 44: Identifier EventNum
+Line 44: Identifier i
+Line 45: VarDeclaration
+Line 45: Identifier flag
+Line 45: FunctionCall
+Line 45: Identifier isPossible
+Line 45: Identifier a
+Line 47: PrintStmt
+Line 47: QueryExpression
+Line 47: Identifier EventNum
+Line 5: Redefinition of variable flag
+Line 13: Redefinition of variable local_array
+Line 24: Redefinition of function isPossible
+Line 26: Redefinition of variable a
+Line 27: Redefinition of variable a
+Line 35: Redefinition of variable num2

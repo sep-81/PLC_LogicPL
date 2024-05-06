@@ -1,0 +1,114 @@
+Line 0: Program
+Line 1: MainDeclaration
+Line 2: VarDeclaration
+Line 2: Identifier num_1
+Line 3: VarDeclaration
+Line 3: Identifier num_2
+Line 3: FloatValue -0.012
+Line 4: VarDeclaration
+Line 4: Identifier flag
+Line 4: BinaryExpression eq
+Line 4: IntValue 5
+Line 4: IntValue 6
+Line 5: ArrayDeclaration 2
+Line 5: Identifier aA_2
+Line 6: AssignStmt
+Line 6: Identifier num2
+Line 6: BinaryExpression add
+Line 6: BinaryExpression mult
+Line 6: Identifier num1
+Line 6: IntValue 5
+Line 6: BinaryExpression sub
+Line 6: UnaryExpression plus
+Line 6: IntValue 6
+Line 6: BinaryExpression div
+Line 6: FloatValue 10.0
+Line 6: ArrayAccess a
+Line 6: IntValue 2
+Line 7: PredicateStmt
+Line 7: Identifier Predicate1
+Line 7: Identifier flag
+Line 8: ImplicationStmt
+Line 8: BooleanValue true
+Line 8: PrintStmt
+Line 8: Identifier num_1
+Line 8: ImplicationStmt
+Line 8: BinaryExpression gte
+Line 8: Identifier flag
+Line 8: BinaryExpression mult
+Line 8: IntValue 5
+Line 8: BinaryExpression mod
+Line 8: Identifier num2
+Line 8: ArrayAccess aA_2
+Line 8: Identifier num_1
+Line 8: AssignStmt
+Line 8: Identifier num_2
+Line 8: Identifier num1
+Line 9: ArrayDeclaration 4
+Line 9: Identifier a2
+Line 9: IntValue 2
+Line 9: IntValue 4
+Line 9: IntValue 6
+Line 9: IntValue 8
+Line 10: VarDeclaration
+Line 10: Identifier num
+Line 10: BinaryExpression add
+Line 10: ArrayAccess a2
+Line 10: IntValue 1
+Line 10: ArrayAccess a2
+Line 10: IntValue 4
+Line 11: ImplicationStmt
+Line 11: BinaryExpression or
+Line 11: BooleanValue true
+Line 11: BinaryExpression or
+Line 11: BinaryExpression and
+Line 11: BooleanValue false
+Line 11: BinaryExpression gte
+Line 11: IntValue 8
+Line 11: IntValue -2
+Line 11: BinaryExpression eq
+Line 11: IntValue 5
+Line 11: BinaryExpression add
+Line 11: Identifier num1
+Line 11: IntValue 3
+Line 11: AssignStmt
+Line 11: Identifier a
+Line 11: IntValue 5
+Line 11: PredicateStmt
+Line 11: Identifier IsPredicate
+Line 11: Identifier b
+Line 13: ForloopStmt
+Line 13: Identifier i
+Line 13: Identifier aA_2
+Line 15: ImplicationStmt
+Line 15: BinaryExpression and
+Line 15: BinaryExpression eq
+Line 15: Identifier a
+Line 15: Identifier b
+Line 15: FunctionCall
+Line 15: Identifier isDoubled
+Line 15: Identifier a
+Line 15: AssignStmt
+Line 15: Identifier flag
+Line 15: BooleanValue true
+Line 15: PrintStmt
+Line 15: Identifier flag
+Line 16: PrintStmt
+Line 16: QueryExpression
+Line 16: Identifier IsPredicate
+Line 16: ArrayAccess a2
+Line 16: IntValue 5
+Line 18: PredicateStmt
+Line 18: Identifier EventNum
+Line 18: Identifier i
+Line 19: VarDeclaration
+Line 19: Identifier flag
+Line 19: FunctionCall
+Line 19: Identifier isPossible
+Line 19: Identifier a
+Line 20: PrintStmt
+Line 20: QueryExpression
+Line 20: Identifier EventNum
+Line 19: Redefinition of variable flag
+
+Process finished with exit code 0
